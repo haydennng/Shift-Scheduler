@@ -11,7 +11,7 @@ using Microsoft.Owin.Security;
 using Shift_Scheduler.App_Start;
 using Microsoft.AspNet.Identity.Owin;
 using Shift_Scheduler.Models;
-
+/*
 namespace Shift_Scheduler.Controllers
 {
     [Authorize]
@@ -240,3 +240,4 @@ namespace Shift_Scheduler.Controllers
         #endregion
     }
 }
+*/

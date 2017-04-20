@@ -25,7 +25,7 @@ namespace Shift_Scheduler.Models
 
         [Display(Name = "last Name")]
         public string lastName { get; set; }
-
+    
         public string userName { get; set; }
       
         public string role { get; set; }
@@ -37,6 +37,7 @@ namespace Shift_Scheduler.Models
         public byte[] picture { get; set; }
         public string department { get; set; }
 
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -45,16 +46,6 @@ namespace Shift_Scheduler.Models
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
-
-        [Display(Name = "Remember me?")]
-        public bool RememberMe { get; set; }
-
-        public string Name { get; set; }
 
         public virtual ICollection<Shifts> shifts { get; set; }
 

@@ -414,5 +414,6 @@ namespace Shift_Scheduler.Models
             get { return phone; }
             set { phone = value; }
         }
+
     }
 }

@@ -21,7 +21,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">  
-                @Html.ActionLink("J.A.K.M Industry", "index", "Employee", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("J.A.K.M Industry", "Index", "Employee", null, new { @class = "navbar-brand" })
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -29,6 +29,7 @@
                     <li>@Html.ActionLink("Employee Info", "UserProfile", "Employee")</li>
                     <li>@Html.ActionLink("Clock in", "ClockIn", "Employee")</li>
                     <li>@Html.ActionLink("Clock out", "ClockOut", "Employee")</li>
+                    <li>@Html.ActionLink("Log Off", "Logoff", "Login")</li>
                 </ul>
             </div>
         </div>

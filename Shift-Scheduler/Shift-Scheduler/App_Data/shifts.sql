@@ -32,12 +32,6 @@ insert into Shifts values('SatMor','Saturday','Morning');
 insert into Shifts values('SatEve','Saturday','Evening');
 insert into Shifts values('SatNit','Saturday','Night');
 
-insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(1,'admin','123','Jimmy','Wang','Manager','123 Main st','1234567890','Development');
-insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(2,'hayden','123','Hayden','Ng','Slave','123 Main st','1234567890','Development');
-insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(3,'kevin','123','Kevin','Tam','Employee','123 Main st','1234567890','Development');
-insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(4,'matt','123','Matt','Whiteguy','Employee','123 Main st','1234567890','Development');
-insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(5,'alex','123','Alex','Bae','Employee','123 Main st','1234567890','Development');
-
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','MonMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','MonEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','MonNit');
@@ -45,21 +39,21 @@ insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','TueM
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','TueEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','TueNit');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','MonMor');
-insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('3','MonMor');
+insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','MonMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','WedMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','WedEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','WedNit');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','ThuMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','ThuEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','ThuNit');
-insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','FriMor');
-insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','FriEve');
+insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','FriMor');
+insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','FriEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','FriNit');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SatMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SatEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SatNit');
-insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SunMor');
-insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SunEve');
+insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','SunMor');
+insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','SunEve');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','SunNit');
 
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (5, '20120618 09:34:09 AM', 'Sunday', 'Morning', 5);

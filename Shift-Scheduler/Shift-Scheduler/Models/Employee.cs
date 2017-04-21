@@ -45,7 +45,7 @@ namespace Shift_Scheduler.Models
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string Password { get; set; }
+        public string passWord { get; set; }
 
         public virtual ICollection<Shifts> shifts { get; set; }
 

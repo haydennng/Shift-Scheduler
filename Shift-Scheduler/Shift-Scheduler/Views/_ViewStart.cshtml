@@ -1,3 +1,14 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout_employee.cshtml";
+    if (HttpContext.Current.Session["Roles"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout_login.cshtml";
+    }
+    else if (HttpContext.Current.Session["Roles"].ToString().Equals("Manager"))
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else if (HttpContext.Current.Session["Roles"].ToString().Equals("Employee"))
+    {
+        Layout = "~/Views/Shared/_Layout_employee.cshtml";
+    }
 }

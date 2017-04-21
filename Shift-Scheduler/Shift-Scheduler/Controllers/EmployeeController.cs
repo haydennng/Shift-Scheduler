@@ -65,7 +65,7 @@ namespace Shift_Scheduler.Controllers
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
             else
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Login");
 
             var res = (from s in db.ShiftSchedules
                        from c in db.Shifts
@@ -85,7 +85,7 @@ namespace Shift_Scheduler.Controllers
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
             else
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Login");
 
             var res = (from e in db.Employees
                        from s in e.shiftSchedules
@@ -120,7 +120,7 @@ namespace Shift_Scheduler.Controllers
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
             else
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Login");
 
             if (employee == null)
                 return HttpNotFound();
@@ -135,7 +135,7 @@ namespace Shift_Scheduler.Controllers
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
             else
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Login");
 
             var res = (from c in db.Clocks
                        where c.empClockID == employee.employeeId && c.clockOut == null && c.clockIn != null
@@ -162,7 +162,7 @@ namespace Shift_Scheduler.Controllers
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
             else
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Login");
 
             var res = (from c in db.Clocks
                        where c.empClockID == employee.employeeId && c.clockIn != null && c.clockOut == null

@@ -54,13 +54,5 @@ namespace Shift_Scheduler.Controllers
             return RedirectToAction("Login", "Login");
         }
 
-        public ActionResult Register()
-        {
-            return View();
-        }
-        public ActionResult Register()
-        {
-            if(ModelState.IsValid)
-        }
     }
 }

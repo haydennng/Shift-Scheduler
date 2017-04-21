@@ -218,6 +218,14 @@ namespace Shift_Scheduler.Models
             ViewBag.app = approve;
             ViewBag.vacation = res3.ToList();
 
+
+            int manID = (int)Session["EmpId"];
+            var result = (from e in db.Employees
+                          where e.employeeId == manID
+                          select new { e.firstName, e.lastName }).FirstOrDefault();
+
+            ViewBag.ManagerName = result.firstName + " " + result.lastName;
+
             foreach (var s in db.shiftChangeRequest)
             {
                 var res2 = (from sc in db.shiftChangeRequest

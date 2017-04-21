@@ -60,7 +60,7 @@ namespace Shift_Scheduler.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult ShiftChangeRequest()
+        public ActionResult ShiftChangeRequest(int id)
         {
             if (Session["EmpId"] != null)
                 this.employee = db.Employees.Find(Session["EmpId"]);
@@ -70,7 +70,7 @@ namespace Shift_Scheduler.Controllers
             var res = (from s in db.ShiftSchedules
                        from c in db.Shifts
                        from e in c.employee
-                       where s.empShiftScheduleID == employee.employeeId && c.shiftType == s.shiftType && c.dayOfTheWeek == s.dayOfTheWeek && s.shiftScheduleId == employee.employeeId && e.employeeId != employee.employeeId
+                       where s.empShiftScheduleID == employee.employeeId && c.shiftType == s.shiftType && c.dayOfTheWeek == s.dayOfTheWeek && s.shiftScheduleId == id && e.employeeId != employee.employeeId
                        select e).ToList();
 
             ViewData["EmployeeName"] = employee.firstName + " " + employee.lastName;
@@ -176,6 +176,6 @@ namespace Shift_Scheduler.Controllers
                 db.SaveChanges();
             }
             return RedirectToAction("index");
-        }
+        }   
     }
 }
